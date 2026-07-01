@@ -1,0 +1,93 @@
+theory:
+  camb:
+    extra_args:
+      num_massive_neutrinos: 1
+      dark_energy_model: ppf
+likelihood:
+  bao.desi_dr2:
+    path: /home/adrien/PDM/code/PDM2026_wsl/cobaya_packages
+    measurements_file: /home/adrien/PDM/code/PDM2026_wsl/notebooks/fisher_forecast/DESI2_fullsky/DESI2_fullsky_mean.txt
+    cov_file: /home/adrien/PDM/code/PDM2026_wsl/notebooks/fisher_forecast/DESI2_fullsky/DESI2_fullsky_cov.txt
+params:
+  logA:
+    value: 3.0448
+    latex: \log(10^{10} A_\mathrm{s})
+  As:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    latex: A_\mathrm{s}
+  H0:
+    value: 70
+    latex: H_0
+  hrdrag:
+    prior:
+      min: 30
+      max: 300
+    ref:
+      dist: norm
+      loc: 100
+      scale: 1
+    proposal: 0.5
+    latex: hr_\mathrm{d}
+  rdrag:
+    value: 'lambda hrdrag, H0: 100 * hrdrag / H0'
+    latex: r_\mathrm{d}
+  omch2:
+    prior:
+      min: 0.001
+      max: 0.99
+    ref:
+      dist: norm
+      loc: 0.12
+      scale: 0.001
+    proposal: 0.0001
+    latex: \Omega_\mathrm{c} h^2
+  mnu:
+    latex: \sum m_\nu
+    value: 0.06
+  nnu:
+    latex: N_\mathrm{eff}
+    value: 3.044
+  w:
+    prior:
+      min: -3.0
+      max: 1.0
+    ref:
+      dist: norm
+      loc: -1.0
+      scale: 0.02
+    proposal: 0.02
+    latex: w_{0}
+  wa:
+    prior:
+      min: -3.0
+      max: 2.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.05
+    proposal: 0.05
+    latex: w_{a}
+  omegam:
+    latex: \Omega_\mathrm{m}
+  omegamh2:
+    derived: 'lambda omegam, H0: omegam*(H0/100)**2'
+    latex: \Omega_\mathrm{m} h^2
+  omega_de:
+    latex: \Omega_\Lambda
+  YHe:
+    latex: Y_\mathrm{P}
+  Y_p:
+    latex: Y_P^\mathrm{BBN}
+  DHBBN:
+    derived: 'lambda DH: 10**5*DH'
+    latex: 10^5 \mathrm{D}/\mathrm{H}
+  tau:
+    value: 0.054
+    latex: \tau_\mathrm{reio}
+  zrei:
+    latex: z_\mathrm{re}
+sampler:
+  mcmc:
+    covmat: /home/adrien/PDM/code/PDM2026_wsl/chains/w_wa/old_w_wa.covmat
+    Rminus1_stop: 0.05
+output: run1
