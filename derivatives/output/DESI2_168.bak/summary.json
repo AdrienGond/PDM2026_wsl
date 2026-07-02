@@ -40,9 +40,9 @@
   "fsky": 0.25,
   "CLASS default parameters": {
     "output": "tCl lCl mPk",
+    "non linear": "halofit",
     "l_max_scalars": 2000,
     "lensing": "yes",
-    "non linear": "halofit",
     "A_s": 2.083e-09,
     "n_s": 0.9649,
     "alpha_s": 0.0,
