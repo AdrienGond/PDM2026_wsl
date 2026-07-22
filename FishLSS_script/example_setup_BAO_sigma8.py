@@ -145,9 +145,6 @@ def do_task(sfb,typ,nbins,fsky,zedges=None):
     #
 
 
-
-
-
 if __name__=="__main__":
     if len(sys.argv)<3:
         outstr = "Usage: "+sys.argv[0]+" <survey-filename> <task-name> [nbins=3] [fsky=0.5]"
@@ -163,4 +160,3 @@ if __name__=="__main__":
     typ = sys.argv[2]
     # Do the actual work.
     do_task(sfb,typ,nbins,fsky)
-    #
