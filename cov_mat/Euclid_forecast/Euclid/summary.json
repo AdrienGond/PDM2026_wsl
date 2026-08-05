@@ -14,18 +14,18 @@
         1.65
     ],
     "Linear Eulerian bias in each bin": [
-        1.46,
-        1.6100000000000003,
-        1.75,
-        1.9
+        1.137,
+        1.408,
+        1.415,
+        2.194
     ],
     "Number density in each bin": [
-        0.000686,
-        0.0005579999999999999,
-        0.000421,
-        0.000261
+        0.000687,
+        0.000761,
+        0.000672,
+        0.000457
     ],
-    "fsky": 0.364,
+    "fsky": 0.32,
     "CLASS default parameters": {
         "output": "tCl lCl mPk",
         "non linear": "halofit",
