@@ -1,0 +1,16 @@
+0.25 7.10233058 DM_over_rs
+0.25 26.5310288 DH_over_rs
+0.5 13.2724446 DM_over_rs
+0.5 22.8787122 DH_over_rs
+0.7 17.5795081 DM_over_rs
+0.7 20.2432225 DH_over_rs
+0.95 22.2745354 DM_over_rs
+0.95 17.4018841 DH_over_rs
+1.35 28.4861894 DM_over_rs
+1.35 13.8422272 DH_over_rs
+1.15 25.5580223 DM_over_rs
+1.15 15.4825997 DH_over_rs
+1.8 34.031257 DM_over_rs
+1.8 10.9687873 DH_over_rs
+2.33000000e+00 3.91818541e+01 DM_over_rs
+2.33000000e+00 8.61537777e+00 DH_over_rs

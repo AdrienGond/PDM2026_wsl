@@ -1,0 +1,3 @@
+nbins: 0 # if zedges is not None, this is ignored
+fsky: 0.75
+zedges: [0.1, 0.4, 0.6, 0.8, 1.1, 1.6]
